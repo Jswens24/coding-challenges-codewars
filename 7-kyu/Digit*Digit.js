@@ -11,3 +11,16 @@
 // function squareDigits(num) {
 //     return 0;
 // }
+
+const squareDigits = (num) => {
+    let numStr = String(num);
+    let numArr = numStr.split('');
+    let totalArr = [];
+
+    for (let i = 0; i < numArr.length; i++) {
+        let square = +numArr[i] * numArr[i]
+        totalArr.push(+square)
+    }
+    const newTotalArr = totalArr.join('')
+    return +newTotalArr
+}
